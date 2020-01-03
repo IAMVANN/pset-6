@@ -1,28 +1,38 @@
 
 window.onload = function() {
-    document.getElementById("Add").onclick = addOn;
+    document.getElementById("Add").onclick = adding;
 }
-const listy = function(){
-    if(listPos == undefined){
-        listPos = 0;
-    } else {
-        listPos++;
+let maxValue = 0;
+let mainArray[];
+const adding = function() {
+
+let input = document.getElementById("input").value;
+let listObjects = {
+    type : "normal",
+    value : input,
+    position : maxValue
+}
+maxValue++;
+array(listObjects)
+}
+const array = function(item) {
+    let mainArray[item.position] = item;
+    for (let things of mainArray){
+        document.getElementByClass("list");
+        list.append(things.value);
+
     }
 }
+const positioning = function(item) {
 
-const addOn = function() {
-    let listPos;
-    listy;
-    alert(listPos);
-let addwords = prompt("What would you like to add?");
-if(addwords == null ){
+    } else if(item.type == "important"){
+        let itemPos = item.position;
+        for value
+        item.position = 1;
 
-} else {
-    let list = document.getElementById("List");
-    let newadd = document.createElement("li");
-    newadd.innerHTML = addwords;
-    newadd.font = "48px sans-serif";
-    list.append(newadd);
+    } else if(item.type == "removing"){
 
-}
+    }
+
+    }
 }
