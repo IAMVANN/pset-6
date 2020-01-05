@@ -76,19 +76,24 @@ while(value2 >= 0){
     value2--;
 }
 mainArray = arrayHolder;
-
 clearer();
+
+
 drawer();
 }
 const clearer = function(){
-
+let workspace = document.getElementById("workspace");
+workspace.innerHTML = "";
 }
 const drawer = function() {
 
     for (let objects of mainArray){
+        let workspace = document.getElementById("workspace");
+        let prioritize = document.createElement("img");
+        prioritize
         let paragraph = document.createElement("p");
         paragraph.innerHTML = objects.words;
-        document.appendChild(paragraph);
+        document.getElementById("workspace").appendChild(paragraph);
     }
 
 }

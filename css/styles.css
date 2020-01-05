@@ -1,0 +1,53 @@
+*{
+  margin:10;
+  padding:10;
+  text-align:center;
+}
+h1 {
+    color: #E71989;
+    font-family: Arial;
+    font-style: bold;
+    font-size: 100px;
+    margin:auto;
+}
+#Add {
+    background-color:#858c85;
+    color: black;
+    font-family: Comic;
+    font-size: 45px;
+    position : fixed;
+    width: 100px;
+    height: 100px;
+    left: 800px;
+    top: 150px;
+}
+#Add a:hover {
+    background-color: #3c403c;
+
+}
+#input {
+    color:black;
+    font-style: Arial;
+    font-size: 40px;
+    position: fixed;
+    width: 500px;
+    height: 100px;
+    position : fixed;
+    left: 300px;
+    top: 150px;
+}
+body{
+    background-color: #FFE042;
+
+}
+p {
+    font-family: Comic Sans;
+    font-size: 22px;
+    color: black;
+
+}
+#workspace{
+    position:fixed;
+    width: 1000px;
+
+}
