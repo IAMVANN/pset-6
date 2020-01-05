@@ -1,8 +1,10 @@
 
 window.onload = function() {
     document.getElementById("Add").onclick = adding;
-    //document.getElementById("President").onclick = president;
-    //document.getElementById("Removing").onclick = removing;
+    document.getElementById("President").onclick = president;
+    document.getElementsByClassName("remove").onclick = removing;
+
+    document.getElementById("cross").onclick = removing;
 }
 let maxValue = -1;
 let mainArray = [];
@@ -19,10 +21,20 @@ let listObjects = {
 positioning(listObjects);
 }
 const president = function() {
+    let listObjects = {
+        type: "important",
+        words : input,
+        position : undefined
+    }
 
 }
 const removing = function(){
-
+    console.log("asdf")
+    let listObjects = {
+        type: "removing",
+        words : "who cares",
+        position : i
+    }
 }
 const positioning = function(item) {
 
@@ -86,14 +98,21 @@ let workspace = document.getElementById("workspace");
 workspace.innerHTML = "";
 }
 const drawer = function() {
-
     for (let objects of mainArray){
         let workspace = document.getElementById("workspace");
         let prioritize = document.createElement("img");
         prioritize
         let paragraph = document.createElement("p");
+        let remove = document.createElement("button");
+        remove.innerHTML= "hey";
+        remove.className = "remove";
+        paragraph.appendChild(remove)
+
+
         paragraph.innerHTML = objects.words;
-        document.getElementById("workspace").appendChild(paragraph);
+        document.getElementById("workspace").appendChild(paragraph).appendChild(remove);
+
+
     }
 
 }
