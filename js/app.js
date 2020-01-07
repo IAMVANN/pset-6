@@ -53,23 +53,49 @@ window.onload = function (){
             let ida = element.parentElement.id;
             id = ida.slice(3,6);
           }
-          console.log(maxValue);
           maxValue--;
           let value = maxValue + 1;
-          console.log(value);
           while(value >= 0 ){
             if(value == id){
                   mainArray.splice(id, 1);
             } else if (value > id){
                 console.log(mainArray[value].position)
                   mainArray[value].position = value - 1;
+                value--;
             }
                 value--;
           }
-          console.log(mainArray);
           cleaner();
-        } else if(job == "priority")
-        alert("ASDF")
+        } else if(job == "priority"){
+          let id;
+          if(maxValue < 10){
+            let ida = element.parentElement.id;
+            id = ida.slice(3,4);
+          } else if(maxValue < 100){
+            let ida = element.parentElement.id;
+            id = ida.slice(3,5);
+          } else if(maxValue < 1000){
+            let ida = element.parentElement.id;
+            id = ida.slice(3,6);
+          }
+
+          let item = mainArray[id];
+          item.position= 0;
+          mainArray.splice(id, 1)
+          let value = maxValue;
+          while(value > 0 ){
+              if(value < id){
+                  mainArray[value].position = value + 1;
+              } else {
+                  mainArray[value].position = value;
+              }
+              value--;
+          }
+          mainArray[0] = item;
+          alert("HI");
+          cleaner();
+        }
+
     }
     function cleaner(){
         list.innerHTML = "";
