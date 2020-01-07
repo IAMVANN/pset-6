@@ -91,7 +91,7 @@ window.onload = function (){
               } else if(value == id){
                  arrayHolder[0] = mainArray[value];
               } else {
-                 arrayHolder[value] = mainArray[value].
+                 arrayHolder[value] = mainArray[value];
               }
               value--;
           }
