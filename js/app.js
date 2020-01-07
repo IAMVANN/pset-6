@@ -29,8 +29,8 @@ window.onload = function (){
     }
     function boxChecked(event) {
         const element = event.target;
-
-        console.log(element.type);
+        const job = element.attributes.job.value;
+        console.log(job);
         if(element.type === "checkbox"){
             if(element.checked == false){
                 element.parentElement.style.textDecoration = "";
@@ -40,9 +40,10 @@ window.onload = function (){
 
             }
 
-        } else if(element.job === "delete"){
-            console.log(element.classList)
-        }
+        } else if(job == "delete"){
+            alert("HEY YO")
+        } else if(job == "priority")
+        alert("ASDF")
     }
     function cleaner(){
         list.innerHTML = "";
@@ -56,8 +57,8 @@ window.onload = function (){
              const PRIOR =  NORMAL;
             let listValue=  `<li id="li-">${object.value}<input id="box-${object.position}"
             	class="checkboxes" type="checkbox">
-                <i class="fa fa-trash-o de" job="delete" id="${object.position}"></i>
-                <i class="fa ${PRIOR} po" job="priority" id="${object.position}"></i>
+                <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
+                <i class="fa ${PRIOR} po" job = "priority" id="${object.position}"></i>
 
                 </li>`;
             //`<li id = "li"> ` + object.value + ` <input id = "box-${object.position}" class="checkboxes" type="checkbox"></li>`;
