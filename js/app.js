@@ -80,14 +80,18 @@ window.onload = function (){
           }
 
           let item = mainArray[id];
+          let arrayHolder = [];
           item.position= 0;
           mainArray.splice(id, 1)
           let value = maxValue;
           while(value > 0 ){
               if(value < id){
-                  mainArray[value].position = value + 1;
+                 arrayHolder[value + 1] = mainArray[value];
+                 arrayHolder[value + 1].position = value + 1
+              } else if(value == id){
+                 arrayHolder[0] = mainArray[value];
               } else {
-                  mainArray[value].position = value;
+                 arrayHolder[value] = mainArray[value].
               }
               value--;
           }
