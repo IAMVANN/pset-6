@@ -29,6 +29,7 @@ window.onload = function (){
     }
     function boxChecked(event) {
         const element = event.target;
+
         const job = element.attributes.job.value;
         console.log(job);
         if(element.type === "checkbox"){
@@ -55,8 +56,8 @@ window.onload = function (){
     function drawing(){
         for(let object of mainArray){
              const PRIOR =  NORMAL;
-            let listValue=  `<li id="li-">${object.value}<input id="box-${object.position}"
-            	class="checkboxes" type="checkbox">
+            let listValue=  `<li job="nothing" id="li-">${object.value}<input id="box-${object.position}"
+            	class="checkboxes" job ="nothing" type="checkbox">
                 <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
                 <i class="fa ${PRIOR} po" job = "priority" id="${object.position}"></i>
 

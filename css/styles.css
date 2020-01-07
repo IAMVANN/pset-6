@@ -3,85 +3,119 @@
   padding:10;
   text-align:center;
 }
-h1 {
-    color: #E71989;
-    font-family: Arial;
-    font-style: bold;
-    font-size: 100px;
-    margin:auto;
+
+body {
+    background-color: #ece7e4;
 }
+
+ul {
+    margin-top: 2rem;
+    list-style: none;
+}
+
+li {
+   border-top: 1px solid white;
+   border-bottom: 1px solid white;
+    padding: 0.5rem 0 0.5rem 0;
+    margin: 0 1rem 0 1rem;
+}
+/* Heading */
+
+.heading {
+  background-color: rgba(9, 122, 108, 0.8);
+}
+
+#title {
+  background-color: transparent;
+  color: white;
+  font-family: Apple Chancery;
+  font-style: italic;
+  font-size: 100px;
+  margin:auto;
+  text-align: center;
+}
+
+/* Buttons */
 #Add {
-    background-color:#66ccff;
-    color: black;
+    background-color:rgba(9, 122, 108);
+    color: white;
     font-family: Comic;
-    font-size: 45px;
+    font-size: 35px;
     position : fixed;
     width: 100px;
     height: 106px;
-    left: 804px;
-    top: 150px;
-    border-color: #66ccff;
+    border-color: #004256;
 }
-#Add a:hover {
-    background-color: #3c403c;
+#Add:hover {
+    cursor: pointer;
+    background-color: rgba(9, 122, 108, 0.8);
+    font-size: 40px;
+}
 
-}
-.button{
-	background-color:#99ff99;
-    font-size: 45px;
-    position: fixed;
-    width:
-
-}
 #input {
     color:black;
     font-style: Arial;
     font-size: 40px;
-    position: fixed;
     width: 500px;
     height: 100px;
-    position : fixed;
-    left: 300px;
-    top: 150px;
     border-color:#66ccff;
 }
-body{
-    background-color: #FFE042;
 
+/* Button Area */
+.additem{
+  align-items: center;
+  top: 13%;
 }
-p {
-    font-family: Comic Sans;
-    font-size: 22px;
-    color: black;
 
-}
+
+/* List */
 #workspace{
-    position:fixed;
-    width: 1000px;
-
+    background-color: rgba(9, 122, 108, 0.9);
+    padding-top: 20
+    width: auto;
+    font-size: 40px;
 }
-.remove{
-	font-family: Comic Sans;
+
+#unorderedList{
+    color: white;
+    text-align: left;
+    left: 10%;
+}
+
+/* Unknown Stuff */
+
+ .remove{
+    font-family: Comic Sans;
     background-color: red;
     font-color: yellow;
 }
 
 .checkboxes {
-	float: right;
-	line-height: 15px;
-	width: 17px;
-	height: 17px;
-	background-color: #e9ecef;
-	border: 1px solid #e9ecef;
-	border-radius: 3px;
+    float: right;
+    line-height: 15px;
+    width: 17px;
+    height: 17px;
+    background-color: #e9ecef;
+    border: 1px solid #e9ecef;
+    border-radius: 3px;
 }
-ul {
-	border-top: 2px solid white;
-	margin-top: 2rem;
-	list-style: none;
+
+.button{
+    background-color:#99ff99;
+    font-size: 45px;
+    position: fixed;
+    width:
 }
-li {
-	border-bottom: 1px solid white;
-	padding: 0.5rem 0 0.5rem 0;
-	margin: 0 1rem 0 1rem;
+
+p {
+  font-family: Comic Sans;
+  font-size: 22px;
+  color: black;
 }
+*/
+spacer
+spacer
+spacer
+spacer
+spacer
+spacer
