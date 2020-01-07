@@ -4,8 +4,11 @@ window.onload = function (){
     var input = document.getElementById("input");
     let list = document.getElementById("unorderedList");
     let listObjects = {};
+    const NORMAL = "fa-exclamation";
+    const PRIORITY = "fa-exclamation-circle";
     document.getElementById("Add").onclick = adding;
     list.addEventListener("click", boxChecked);
+
 
     function adding(){
         if(input.value == ""){
@@ -37,6 +40,8 @@ window.onload = function (){
 
             }
 
+        } else if(element.job === "delete"){
+            console.log(element.classList)
         }
     }
     function cleaner(){
@@ -48,8 +53,13 @@ window.onload = function (){
     }
     function drawing(){
         for(let object of mainArray){
+             const PRIOR =  NORMAL;
             let listValue=  `<li id="li-">${object.value}<input id="box-${object.position}"
-            	class="checkboxes" type="checkbox"></li>`;
+            	class="checkboxes" type="checkbox">
+                <i class="fa fa-trash-o de" job="delete" id="${object.position}"></i>
+                <i class="fa ${PRIOR} po" job="priority" id="${object.position}"></i>
+
+                </li>`;
             //`<li id = "li"> ` + object.value + ` <input id = "box-${object.position}" class="checkboxes" type="checkbox"></li>`;
 
 
