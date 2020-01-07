@@ -11,18 +11,26 @@ h1 {
     margin:auto;
 }
 #Add {
-    background-color:#858c85;
+    background-color:#66ccff;
     color: black;
     font-family: Comic;
     font-size: 45px;
     position : fixed;
     width: 100px;
-    height: 100px;
-    left: 800px;
+    height: 106px;
+    left: 804px;
     top: 150px;
+    border-color: #66ccff;
 }
 #Add a:hover {
     background-color: #3c403c;
+
+}
+.button{
+	background-color:#99ff99;
+    font-size: 45px;
+    position: fixed;
+    width:
 
 }
 #input {
@@ -35,6 +43,7 @@ h1 {
     position : fixed;
     left: 300px;
     top: 150px;
+    border-color:#66ccff;
 }
 body{
     background-color: #FFE042;
@@ -49,8 +58,30 @@ p {
 #workspace{
     position:fixed;
     width: 1000px;
-    height: 1000px;
-    top:500px;
-    text-align: center;
 
+}
+.remove{
+	font-family: Comic Sans;
+    background-color: red;
+    font-color: yellow;
+}
+
+.checkboxes {
+	float: right;
+	line-height: 15px;
+	width: 17px;
+	height: 17px;
+	background-color: #e9ecef;
+	border: 1px solid #e9ecef;
+	border-radius: 3px;
+}
+ul {
+	border-top: 2px solid white;
+	margin-top: 2rem;
+	list-style: none;
+}
+li {
+	border-bottom: 1px solid white;
+	padding: 0.5rem 0 0.5rem 0;
+	margin: 0 1rem 0 1rem;
 }
