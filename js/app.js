@@ -85,7 +85,7 @@ window.onload = function (){
           mainArray.splice(id, 1)
           let value = maxValue;
           while(value > 0 ){
-              if(value < id){
+              if(value > id){
                  arrayHolder[value + 1] = mainArray[value];
                  arrayHolder[value + 1].position = value + 1
               } else if(value == id){
