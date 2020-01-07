@@ -95,8 +95,7 @@ window.onload = function (){
               }
               value--;
           }
-          mainArray[0] = item;
-          alert("HI");
+          mainArray = arrayHolder;
           cleaner();
         }
 
