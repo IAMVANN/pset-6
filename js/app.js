@@ -5,7 +5,7 @@ window.onload = function (){
     let list = document.getElementById("unorderedList");
     let listObjects = {};
     document.getElementById("Add").onclick = adding;
-    list.li.input.onclick = removing();
+    list.addEventListener("click", boxChecked);
 
     function adding(){
         if(input.value == ""){
@@ -24,6 +24,21 @@ window.onload = function (){
         }
 
     }
+    function boxChecked(event) {
+        const element = event.target;
+
+        console.log(element.type);
+        if(element.type === "checkbox"){
+            if(element.checked == false){
+                element.parentElement.style.textDecoration = "";
+
+            } else{
+                element.parentElement.style.textDecoration = "line-through";
+
+            }
+
+        }
+    }
     function cleaner(){
         list.innerHTML = "";
         drawing();
@@ -33,8 +48,11 @@ window.onload = function (){
     }
     function drawing(){
         for(let object of mainArray){
-            let listValue= `<li id = "li"> ` + object.value + ` <input id = "box-${object.position}" class="checkboxes" type="checkbox"></li>`;
-            console.log(listValue);
+            let listValue=  `<li id="li-">${object.value}<input id="box-${object.position}"
+            	class="checkboxes" type="checkbox"></li>`;
+            //`<li id = "li"> ` + object.value + ` <input id = "box-${object.position}" class="checkboxes" type="checkbox"></li>`;
+
+
             list.insertAdjacentHTML('beforeend', listValue);
         }
 
