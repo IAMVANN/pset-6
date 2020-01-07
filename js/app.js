@@ -42,7 +42,32 @@ window.onload = function (){
             }
 
         } else if(job == "delete"){
-            alert("HEY YO")
+          let id
+          if(maxValue < 10){
+            let ida = element.parentElement.id;
+            id = ida.slice(3,4);
+          } else if(maxValue < 100){
+            let ida = element.parentElement.id;
+            id = ida.slice(3,5);
+          } else if(maxValue < 1000){
+            let ida = element.parentElement.id;
+            id = ida.slice(3,6);
+          }
+          console.log(maxValue);
+          maxValue--;
+          let value = maxValue + 1;
+          console.log(value);
+          while(value >= 0 ){
+            if(value == id){
+                  mainArray.splice(id, 1);
+            } else if (value > id){
+                console.log(mainArray[value].position)
+                  mainArray[value].position = value - 1;
+            }
+                value--;
+          }
+          console.log(mainArray);
+          cleaner();
         } else if(job == "priority")
         alert("ASDF")
     }
@@ -56,7 +81,7 @@ window.onload = function (){
     function drawing(){
         for(let object of mainArray){
              const PRIOR =  NORMAL;
-            let listValue=  `<li job="nothing" id="li-">${object.value}<input id="box-${object.position}"
+            let listValue=  `<li job="nothing" id="li-${object.position}">${object.value}<input id="box-${object.position}"
             	class="checkboxes" job ="nothing" type="checkbox">
                 <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
                 <i class="fa ${PRIOR} po" job = "priority" id="${object.position}"></i>
