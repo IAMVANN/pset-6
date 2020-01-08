@@ -1,4 +1,5 @@
 window.onload = function (){
+    alert("Please note: the trash can icon as well as the exclamation mark(mark and circle) icons were not made by me(fonts folder and css/font-awesome.css ). Title: Font Awesome; Author:davegandy; Date : N.D.; CodeVerson  4.7.0;")
     let maxValue = -1;
     let mainArray = [];
     var input = document.getElementById("input");
@@ -134,8 +135,8 @@ window.onload = function (){
     function drawing(){
         for(let object of mainArray){
     //        console.log(object.position);
-            let listValue=  `<li job="nothing" id="li-${object.position}">${object.value}<input id="box-${object.position}"
-            	class="checkboxes" job ="nothing" type="checkbox">
+            let listValue=  `<li job="nothing" id="li-${object.position}">${object.value}
+                <input id="box-${object.position}"class="checkboxes" job ="nothing" type="checkbox">
                 <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
                 <i class="fa ${object.priority} po" job = "priority" id="${object.position}"></i>
 

@@ -104,7 +104,6 @@ li {
     background-color:#99ff99;
     font-size: 45px;
     position: fixed;
-    width:
 }
 
 p {
@@ -112,10 +111,18 @@ p {
   font-size: 22px;
   color: black;
 }
-*/
-spacer
-spacer
-spacer
-spacer
-spacer
-spacer
+.fa.fa-trash-o.de {
+    position: absolute;
+    left: 2%;
+}
+.fa:hover {
+    cursor: pointer;
+}
+.fa-exclamation {
+    position: absolute;
+    right: 5%;
+}
+.fa-exclamation-circle{
+    position: absolute;
+    right: 5%;
+}
