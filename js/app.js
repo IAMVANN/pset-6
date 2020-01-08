@@ -151,7 +151,6 @@ window.onload = function (){
         for(let object of mainArray){
             let listValue;
             if(object.cross == "Yes"){
-                console.log("ran");
                 listValue =  `<li job="nothing" id="li-${object.position}"><strike>${object.value}</strike>
                     <input id="box-${object.position}"class="checkboxes" job ="nothing" type="checkbox">
                     <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
@@ -159,7 +158,6 @@ window.onload = function (){
 
                     </li>`;
             } else {
-                    console.log("ran");
                 listValue =  `<li job="nothing" id="li-${object.position}">${object.value}
                     <input id="box-${object.position}"class="checkboxes" job ="nothing" type="checkbox">
                     <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
