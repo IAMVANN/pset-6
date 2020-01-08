@@ -150,6 +150,7 @@ window.onload = function (){
     function drawing(){
         for(let object of mainArray){
             let listValue;
+            //hope this works
             if(object.cross == "Yes"){
                 listValue =  `<li job="nothing" id="li-${object.position}"><strike>${object.value}</strike>
                     <input id="box-${object.position}"class="checkboxes" job ="nothing" type="checkbox">
