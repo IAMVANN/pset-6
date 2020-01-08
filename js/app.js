@@ -20,7 +20,8 @@ window.onload = function (){
             var object = {
                 value : input.value,
                 position: maxValue,
-                priority : NORMAL
+                priority : NORMAL,
+                cross: "No"
 
 
             };
@@ -34,10 +35,23 @@ window.onload = function (){
 
         const job = element.attributes.job.value;
         if(element.type === "checkbox"){
+            let id
+            if(maxValue < 10){
+              let ida = element.parentElement.id;
+              id = ida.slice(3,4);
+            } else if(maxValue < 100){
+              let ida = element.parentElement.id;
+              id = ida.slice(3,5);
+            } else if(maxValue < 1000){
+              let ida = element.parentElement.id;
+              id = ida.slice(3,6);
+            }
             if(element.checked == false){
+                mainArray[id].cross = "No";
                 element.parentElement.style.textDecoration = "";
 
             } else{
+                mainArray[id].cross = "Yes";
                 element.parentElement.style.textDecoration = "line-through";
 
             }
@@ -61,7 +75,8 @@ window.onload = function (){
                   mainArray.splice(id, 1);
             } else if (value > id){
                   mainArray[value].position = value - 1;
-                value--;
+            } else {
+
             }
                 value--;
           }
@@ -134,15 +149,24 @@ window.onload = function (){
 
     function drawing(){
         for(let object of mainArray){
-    //        console.log(object.position);
-            let listValue=  `<li job="nothing" id="li-${object.position}">${object.value}
-                <input id="box-${object.position}"class="checkboxes" job ="nothing" type="checkbox">
-                <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
-                <i class="fa ${object.priority} po" job = "priority" id="${object.position}"></i>
+            let listValue;
+            if(object.cross == "Yes"){
+                console.log("ran");
+                listValue =  `<li job="nothing" id="li-${object.position}"><strike>${object.value}</strike>
+                    <input id="box-${object.position}"class="checkboxes" job ="nothing" type="checkbox">
+                    <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
+                    <i class="fa ${object.priority} po" job = "priority" id="${object.position}"></i>
 
-                </li>`;
-            //`<li id = "li"> ` + object.value + ` <input id = "box-${object.position}" class="checkboxes" type="checkbox"></li>`;
+                    </li>`;
+            } else {
+                    console.log("ran");
+                listValue =  `<li job="nothing" id="li-${object.position}">${object.value}
+                    <input id="box-${object.position}"class="checkboxes" job ="nothing" type="checkbox">
+                    <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
+                    <i class="fa ${object.priority} po" job = "priority" id="${object.position}"></i>
 
+                    </li>`;
+            }
 
             list.insertAdjacentHTML('beforeend', listValue);
         }
