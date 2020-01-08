@@ -10,7 +10,7 @@ window.onload = function (){
     document.getElementById("Add").onclick = adding;
     list.addEventListener("click", boxChecked);
 
-
+//something wrong
     function adding(){
         if(input.value == ""){
             alert("Please put in a value :D");
