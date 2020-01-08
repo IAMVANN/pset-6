@@ -55,9 +55,9 @@ window.onload = function (){
                 element.parentElement.style.textDecoration = "line-through";
 
             }
-
+            cleaner();
         } else if(job == "delete"){
-          let id
+          let id;
           if(maxValue < 10){
             let ida = element.parentElement.id;
             id = ida.slice(3,4);
@@ -93,7 +93,6 @@ window.onload = function (){
               let ida = element.parentElement.id;
               id = ida.slice(3,6);
             }
-
             let item = mainArray[id];
             let arrayHolder = [];
 
@@ -109,9 +108,10 @@ window.onload = function (){
                         arrayHolder[maxValue] = item;
                         arrayHolder[maxValue].priority = NORMAL;
                     } else {
-
+                        arrayHolder[value] = mainArray[value];
                     }
                     value--;
+
                 }
                     mainArray = arrayHolder;
                     cleaner();
@@ -119,7 +119,7 @@ window.onload = function (){
 
             } else {
                 element.classList.toggle(PRIORITY);
-                  item.position= 0;
+                  item.position = 0;
                   let value = maxValue;
                   while(value >= 0 ){
                       if(value < id){
@@ -150,10 +150,9 @@ window.onload = function (){
     function drawing(){
         for(let object of mainArray){
             let listValue;
-            //hope this works
             if(object.cross == "Yes"){
                 listValue =  `<li job="nothing" id="li-${object.position}"><strike>${object.value}</strike>
-                    <input id="box-${object.position}"class="checkboxes" job ="nothing" type="checkbox">
+                    <input id="box-${object.position}"class="checkboxes" job ="nothing" type="checkbox" checked= "checked">
                     <i class="fa fa-trash-o de" job = "delete" id="${object.position}"></i>
                     <i class="fa ${object.priority} po" job = "priority" id="${object.position}"></i>
 
